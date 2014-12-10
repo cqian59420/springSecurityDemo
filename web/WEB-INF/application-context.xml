@@ -12,8 +12,8 @@
         </property>
     </bean>
 
-    <!--<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" destroy-method="close">-->
-    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource" >
+    <!--<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">-->
         <property name="driverClass" value="${jdbc.driverClass}"/>
         <property name="jdbcUrl" value="${jdbc.jdbcUrl}"/>
         <property name="user" value="${jdbc.user}"/>

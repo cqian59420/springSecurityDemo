@@ -16,7 +16,7 @@
     <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
         <property name="driverClass" value="${jdbc.driverClass}"/>
         <property name="jdbcUrl" value="${jdbc.jdbcUrl}"/>
-        <property name="user" value="${jdbc.user}"/>
+        <property name="username" value="${jdbc.user}"/>
         <property name="password" value="${jdbc.password}"/>
         <property name="minPoolSize" value="${jdbc.miniPoolSize}"/>
         <property name="maxPoolSize" value="${jdbc.maxPoolSize}"/>

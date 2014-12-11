@@ -7,11 +7,22 @@
        http://www.springframework.org/schema/security
        http://www.springframework.org/schema/security/spring-security-3.1.xsd">
 
-      <security:http pattern="/decorators/**" security="none"/>
-       <security:http pattern="/javascript/**" security="none"/>
+    <security:http pattern="/decorators/**" security="none"/>
+    <security:http pattern="/javascript/**" security="none"/>
 
 
-<!--<security:http auto-config="true">
-       <security:intercept-url pattern="/**" access="ROLE_USER"/>
-</security:http>-->
+
+
+    <security:http auto-config="true">
+        <security:intercept-url pattern="/**" access="ROLE_USER"/>
+        <security:intercept-url pattern="/favicon.ico" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+    </security:http>
+
+    <security:authentication-manager>
+        <security:authentication-provider>
+            <security:user-service>
+                <security:user name="cqian59420@gmail.com" password="cqian59420" authorities="ROLE_USER"/>
+            </security:user-service>
+        </security:authentication-provider>
+    </security:authentication-manager>
 </beans>
